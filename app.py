@@ -162,4 +162,5 @@ def dashboard(user_id):
     return render_template('dashboard.html', user=user)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
